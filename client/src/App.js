@@ -29,7 +29,7 @@ function App() {
     <section className="text-gray-600 overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <p className="text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          Lajmi APP
+          Lajmi-APP
         </p>
         {/* <FbPostSearch searchText={(text) => setTerm(text)} /> */}
         {!isLoading && posts.length === 0 && (
