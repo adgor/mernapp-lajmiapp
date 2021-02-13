@@ -64,7 +64,7 @@ const PostCard = ({ filtered }) => {
               </span>
             </td>
             <td class="px-6 py-2 text-sm text-gray-500">{post.comment}</td>
-            <td class="px-6 py-2 text-sm text-gray-500">{post.comment}</td>
+            <td class="px-6 py-2 text-sm text-gray-500">{post.shares}</td>
             <td class="px-6 py-2 whitespace-nowrap">
               <div class="text-sm text-gray-900">{post.time}</div>
               <div class="text-sm text-gray-500">Updated: {post.stime}</div>
