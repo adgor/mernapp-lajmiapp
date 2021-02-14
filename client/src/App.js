@@ -25,7 +25,7 @@ function App() {
   const filtered = posts.filter((post) => {
     return (
       post.pname.toLowerCase().includes(term.toLowerCase()) ||
-      post.time.toLowerCase().includes(term.toLowerCase()) ||
+      post.ptime.toLowerCase().includes(term.toLowerCase()) ||
       post.stime.toLowerCase().includes(term.toLowerCase()) ||
       post.title.toLowerCase().includes(term.toLowerCase())
     );
