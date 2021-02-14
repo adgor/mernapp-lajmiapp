@@ -33,42 +33,56 @@ function App() {
 
   // JSX
   return (
-    <section>
+    <div className="container  px-5  mx-auto flex flex-col">
       <p className="text-3xl text-center mt-4 leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         Lajmi-APP
       </p>
       <FbPostSearch searchText={(text) => setTerm(text)} />
-      <div className="  float-right mx-36 mb-4">
+      <div className="  float-right mr-40 mb-4">
         <FbPostSearchByDay searchText={() => setTerm(toDayDate)} />
       </div>
-      <div className="container  px-5  mx-auto flex flex-col">
-        <div className="-my-2 sm:-mx-6 lg:-mx-8">
-          <div className="py-2 align-middle inline-block  sm:px-6 lg:px-8">
-            <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-              {!isLoading && posts.length === 0 && (
-                <h1 className="text-5xl text-center mx-auto my-32">
-                  Nuk u gjet anje Post
+      <div className="-my-2 sm:-mx-6 lg:-mx-8">
+        <div className="py-2 align-middle inline-block  sm:px-6 lg:px-8">
+          <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            {!isLoading && posts.length === 0 && (
+              <div>
+                <h1 className="text-5xl text-center mx-auto mt-10">
+                  Nuk u gjet asnje Post :/
                 </h1>
-              )}
+                <p className="text-xl text-center mx-auto my-8">
+                  Rikthehuni pas disa oresh!!!! <br />{" "}
+                  <span className=" font-semibold">
+                    Ju faleminderit për mirekuptimin!{" "}
+                  </span>
+                </p>
+              </div>
+            )}
 
-              {isLoading ? (
-                <h1 className="text-6xl text-center mx-auto my-14 leading-8 font-extrabold tracking-tight text-gray-900">
+            {isLoading ? (
+              <div>
+                <h1 className="text-6xl text-center mx-auto mt-10 leading-8 font-extrabold tracking-tight text-gray-900">
                   Mbushet ...
                 </h1>
-              ) : (
-                <div className="flex flex-wrap ">
-                  {<PostCard filtered={filtered} />}
+                <p className="text-xl text-center mx-auto my-8">
+                  Po vonohet shume? <br />
+                  <span className=" font-semibold">
+                    Beni refresh faqen ose kontaktoni administratorin Tuaj!!!
+                  </span>
+                </p>
+              </div>
+            ) : (
+              <div className="flex flex-wrap ">
+                {<PostCard filtered={filtered} />}
 
-                  {/* {posts.map((post) => (
+                {/* {posts.map((post) => (
                   <PostCard key={post._id} post={post} />
                 ))} */}
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 export default App;

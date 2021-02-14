@@ -15,7 +15,7 @@ const FbPostSearchByDay = ({ searchText }) => {
 
       <button
         type="submit"
-        className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+        className="px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
       >
         Postimet e sotme
       </button>
