@@ -10,8 +10,8 @@ const FbPostSearch = ({ searchText }) => {
   };
 
   return (
-    <div className=" max-w-4xl rounded overflow-hidden my-14 mx-auto">
-      <form onSubmit={onSubmit} className=" w-full max-w-4xl">
+    <div className=" max-w-md rounded overflow-hidden my-14 mx-auto">
+      <form onSubmit={onSubmit} className=" w-full max-w-xs">
         <div className=" flex items-center  border-b-2 border-indigo-500 py-2 ">
           <input
             onChange={(e) => setText(e.target.value)}
@@ -22,7 +22,7 @@ const FbPostSearch = ({ searchText }) => {
 
           <button
             type="submit"
-            className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+            className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
           >
             Kerko
           </button>

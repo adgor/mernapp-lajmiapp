@@ -48,7 +48,7 @@ const PostCard = ({ filtered }) => {
       </thead>
 
       {filtered.map((post) => (
-        <tbody class="bg-white divide-y divide-gray-200 ">
+        <tbody className="bg-white divide-y divide-gray-200 ">
           <tr>
             <td className="px-6 py-2">
               <h4 className="text-sm text-gray-900   ">{post.pname}</h4>
@@ -58,22 +58,22 @@ const PostCard = ({ filtered }) => {
                 {post.title}
               </h4>
             </td>
-            <td class="px-6 py-2 ">
-              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+            <td className="px-6 py-2 ">
+              <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                 {post.like}
               </span>
             </td>
-            <td class="px-6 py-2 text-sm text-gray-500">{post.comment}</td>
-            <td class="px-6 py-2 text-sm text-gray-500">{post.shares}</td>
-            <td class="px-6 py-2 whitespace-nowrap">
-              <div class="text-sm text-gray-900">{post.time}</div>
-              <div class="text-sm text-gray-500">Updated: {post.stime}</div>
+            <td className="px-6 py-2 text-sm text-gray-500">{post.comment}</td>
+            <td className="px-6 py-2 text-sm text-gray-500">{post.shares}</td>
+            <td className="px-6 py-2 whitespace-nowrap">
+              <div className="text-sm text-gray-900">{post.time}</div>
+              <div className="text-sm text-gray-500">Updated: {post.stime}</div>
             </td>
-            <td class="px-6 py-2 text-right text-sm font-medium">
+            <td className="px-6 py-2 text-right text-sm font-medium">
               <a
                 href={post.link}
                 target="_blank"
-                class="text-indigo-600 hover:text-indigo-900"
+                className="text-indigo-600 hover:text-indigo-900"
               >
                 Shiko
               </a>
@@ -83,22 +83,22 @@ const PostCard = ({ filtered }) => {
       ))}
 
       {/* 
-      <tbody class="bg-white divide-y divide-gray-200">
+      <tbody className="bg-white divide-y divide-gray-200">
         <tr>
-          <td class="px-6 py-4 ">
-            <div class="text-sm text-gray-900"> {post.pname}</div>
+          <td className="px-6 py-4 ">
+            <div className="text-sm text-gray-900"> {post.pname}</div>
           </td>
-          <td class="px-6 py-4 truncate w-1/5">
+          <td className="px-6 py-4 truncate w-1/5">
             <h4 className="  font-semibold text-gray-900   ">{post.title}</h4>
           </td>
-          <td class="px-6 py-4 ">
-            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+          <td className="px-6 py-4 ">
+            <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
               {post.like}
             </span>
           </td>
-          <td class="px-6 py-4 text-sm text-gray-500">{post.comment}</td>
-          <td class="px-6 py-4 text-right text-sm font-medium">
-            <a href={post.link} class="text-indigo-600 hover:text-indigo-900">
+          <td className="px-6 py-4 text-sm text-gray-500">{post.comment}</td>
+          <td className="px-6 py-4 text-right text-sm font-medium">
+            <a href={post.link} className="text-indigo-600 hover:text-indigo-900">
               Shiko
             </a>
           </td>
