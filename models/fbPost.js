@@ -17,10 +17,10 @@ FbPostsSchema = new Schema({
 // Model & collection name /db name
 const FbPost = mongoose.model("test", FbPostsSchema, "test");
 
-const job = schedule.scheduleJob("*/10 * * * *", function () {
-  deleteAllPosts();
-  console.log("Deleted everything from the DB!");
-});
+// const job = schedule.scheduleJob("* * * * *", function () {
+//   deleteAllPosts();
+//   console.log("Deleted everything from the DB!");
+// });
 
 // Function call
 // Deleting All Posts from DB
