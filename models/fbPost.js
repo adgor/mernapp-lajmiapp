@@ -24,14 +24,14 @@ const FbPost = mongoose.model("test", FbPostsSchema, "test");
 
 // Function call
 // Deleting All Posts from DB
-function deleteAllPosts() {
-  FbPost.deleteMany()
-    .then(function () {
-      console.log("Data deleted"); // Success
-    })
-    .catch(function (error) {
-      console.log(error); // Failure
-    });
-}
+// function deleteAllPosts() {
+//   FbPost.deleteMany()
+//     .then(function () {
+//       console.log("Data deleted"); // Success
+//     })
+//     .catch(function (error) {
+//       console.log(error); // Failure
+//     });
+// }
 
 module.exports = FbPost;

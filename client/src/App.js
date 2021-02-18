@@ -8,10 +8,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState("");
 
-  // get the Date func
-  var tempDate = new Date();
-  var toDayDate = `${tempDate.getDate()},`;
+  // Sort data based Valies of likes
+  let likeUp = posts.sort(function (a, b) {
+    return parseInt(b.like) - parseInt(a.like);
+  });
 
+  // fetch data from api route
   useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
@@ -22,7 +24,12 @@ function App() {
       .catch((err) => console.log(err));
   }, [term]);
 
-  const filtered = posts.filter((post) => {
+  // get the Date func
+  var tempDate = new Date();
+  var toDayDate = `${tempDate.getDate()},`;
+
+  // Filter data based on Search
+  const filtered = likeUp.filter((post) => {
     return (
       post.pname.toLowerCase().includes(term.toLowerCase()) ||
       post.ptime.toLowerCase().includes(term.toLowerCase()) ||
@@ -37,8 +44,10 @@ function App() {
       <p className="text-3xl text-center mt-4 leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         Lajmi-APP
       </p>
+      {/* Search field input component */}
       <FbPostSearch searchText={(text) => setTerm(text)} />
       <div className="  float-right mr-40 mb-4">
+        {/* toDays post filter component */}
         <FbPostSearchByDay searchText={() => setTerm(toDayDate)} />
       </div>
       <div className="-my-2 sm:-mx-6 lg:-mx-8">
