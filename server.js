@@ -8,14 +8,8 @@ const PORT = process.env.PORT || 8080;
 
 const routes = require("./routes/api");
 
-// mongodb Atlas URI
-MONGODB_URI = "mongodb+srv://adgor:kiki321123@cluster0.sbotw.mongodb.net/test";
-
-// Local mongoDB
-LOCALDB_URI = "mongodb://localhost/mern_app";
-
 // Connect to mongDB
-mongoose.connect(MONGODB_URI || LOCALDB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   //   dbName: "test",
   useUnifiedTopology: true,
